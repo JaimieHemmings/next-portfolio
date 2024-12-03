@@ -79,6 +79,9 @@ function Geometries() {
     new THREE.MeshStandardMaterial({ color: 0xfbf5f5, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({ color: 0xcff5fe, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({ color: 0xe233fe, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0xD90368, roughness: 0.4 }),
+    new THREE.MeshStandardMaterial({ color: 0x2E294E, roughness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0xFFD400, roughness: 0.2 }),
     new THREE.MeshStandardMaterial({
       roughness: 0,
       metalness: 1,

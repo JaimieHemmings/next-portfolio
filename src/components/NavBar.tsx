@@ -69,7 +69,7 @@ export default function NavBar() {
             />
             </li>
         </div>
-        <DesktopMenu links={links}/>
+        <DesktopMenu link={links}/>
       </ul>
     </nav>
   );
@@ -87,10 +87,10 @@ function NameLogo({ name }: { name: string }) {
   );
 }
 
-function DesktopMenu({links}: {link: LinkItem[]}) {
+function DesktopMenu({link}: {link: LinkItem[]}) {
   return (
     <div className="relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
-      {links.map((link, index) => (
+      {link.map((link, index) => (
       <li key={index}>
             <Link
               className={clsx(
