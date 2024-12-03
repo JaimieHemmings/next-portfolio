@@ -36,12 +36,12 @@ function Geometries() {
   const geometries = [
     {
       position: [0, 0, 0],
-      r: 0.3,
-      geometry: new THREE.IcosahedronGeometry(3), // Gem
+      r: 1,
+      geometry: new THREE.TorusKnotGeometry(1.3), // TorusKnot
     },
     {
       position: [1, -0.75, 4],
-      r: 0.4,
+      r: 1.2,
       geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
     },
     {
@@ -62,25 +62,29 @@ function Geometries() {
   ];
 
   const soundEffects = [
+    new Audio("/sounds/hit1.ogg"),
     new Audio("/sounds/hit2.ogg"),
     new Audio("/sounds/hit3.ogg"),
     new Audio("/sounds/hit4.ogg"),
+    new Audio("/sounds/hit6.ogg"),
+    new Audio("/sounds/hit7.ogg"),
+    new Audio("/sounds/hit8.ogg"),
   ];
 
   const materials = [
     new THREE.MeshNormalMaterial(),
-    new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0 }),
-    new THREE.MeshStandardMaterial({ color: 0xf1c40f, roughness: 0.4 }),
-    new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0x01ffff, roughness: 0 }),
+    new THREE.MeshStandardMaterial({ color: 0xe233fe, roughness: 0.4 }),
+    new THREE.MeshStandardMaterial({ color: 0xfbf5f5, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0xcff5fe, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0xe233fe, roughness: 0.1 }),
     new THREE.MeshStandardMaterial({
       roughness: 0,
-      metalness: 0.5,
-      color: 0x2980b9,
+      metalness: 1,
+      color: 0x01ffff,
     }),
     new THREE.MeshStandardMaterial({
-      color: 0x2c3e50,
+      color: 0xe233fe,
       roughness: 0.1,
       metalness: 0.5,
     }),

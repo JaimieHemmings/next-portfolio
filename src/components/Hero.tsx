@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { render } from '@react-three/fiber';
 import { gsap } from 'gsap';
 import Bounded from './Bounded';
 import { Shapes } from './Shapes';
@@ -57,7 +56,7 @@ const Hero = () => {
 
   return (
     <Bounded ref={component}>
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid min-h-[50vh] grid-cols-1 md:grid-cols-2 items-center">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1 className="mb-8 text-[clamp(3rem,10vmin,20rem)] font-extrabold leading-none tracking-tighter" aria-label="Jaimie Hemmings">
