@@ -2,7 +2,8 @@ import Bounded from '@/components/Bounded'
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import React from 'react'
-import Image from 'next/image'
+import Avatar from '@/components/Avatar'
+import TechList from '@/components/TechList'
 
 const page = () => {
   return (
@@ -18,14 +19,13 @@ const page = () => {
           <p>Beyond development, I&apos;m committed to staying on the cutting edge of technology, constantly exploring new tools and techniques to deliver exceptional results. Let&apos;s create something amazing together!</p>
           <Button linkField="#" label="Contact Me" />
         </div>
-        <Image
-          className="col-start-2 row-start-1 max-w-sm md:col-start-2 md:row-end-3"
-          src="/image/profile-image.jpg"
-          alt="Jaimie Hemmings"
-          width={400}
-          height={400}
+        <Avatar
+          altText="Jaimie Hemmings"
+          image="/image/profile-image.jpg"
+          className="row-start-1 mx-auto max-w-sm md:col-start-2 md:row-end-3"
         />
       </div>
+      <TechList />
     </Bounded>
   )
 }
