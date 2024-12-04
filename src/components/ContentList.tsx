@@ -15,22 +15,22 @@ const itemList: ContentItem[] = [
   {
     title: "Blog Post Title 1",
     tags: ["JavaScript", "React"],
-    image: "/image/profile-image.jpg"
+    image: "https://picsum.photos/200/300?random=1"
   },
   {
     title: "Blog Post Title 2",
     tags: ["JavaScript", "React"],
-    image: "/image/profile-image.jpg"
+    image: "https://picsum.photos/200/300?random=2"
   },
   {
     title: "Blog Post Title 3",
     tags: ["JavaScript", "React"],
-    image: "/image/profile-image.jpg"
+    image: "https://picsum.photos/200/300?random=3"
   },
   {
     title: "Blog Post Title 1",
     tags: ["CSS", "Tailwind"],
-    image: "/image/profile-image.jpg"
+    image: "https://picsum.photos/200/300?random=4"
   },
 ];
 
@@ -102,7 +102,7 @@ export default function ContentList() {
           <li
             key={index}
             className="list-item opacity-0f"
-            onMouseEnter={() => onMouseEnter(1)}  
+            onMouseEnter={() => onMouseEnter(index)}  
           >
             <Link
               href="#"

@@ -17,7 +17,7 @@ export default function NavBar() {
   const links: LinkItem[] = [
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
-    { href: "#", label: "Projects" },
+    { href: "/projects", label: "Projects" },
   ];
   return (
     <nav aria-label="Main navigation">
