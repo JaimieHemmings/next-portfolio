@@ -30,7 +30,7 @@ export default function Experience() {
             <span className="text-3xl font-extralight">/</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">
-            <p>Collaborating with small to medium-sized businesses to update and redevelop their websites. This involves enhancing user experience, modernizing designs, ensuring mobile responsiveness, and optimizing for SEO. Jaimie delivers bespoke solutions tailored to each clients needs, utilizing the latest web technologies and content management systems to create engaging and effective digital presences.
+            <p>Collaborating with small to medium-sized businesses to update and redevelop their websites. This involves enhancing user experience, modernizing designs, ensuring mobile responsiveness, and optimizing for SEO. Jaimie delivers bespoke solutions tailored to each client&apos;s needs, utilizing the latest web technologies and content management systems to create engaging and effective digital presences.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function Experience() {
             <span>ITPie</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">
-            <p>In my role as a Frontend Developer at ITPie, I worked in an Agile environment to deliver custom web solutions for a diverse range of clients. Utilizing a bespoke content management system built in C#, I was responsible for designing, developing, and testing front-end components that met each client's unique requirements using JavaScript and various libraries.</p>
+            <p>In my role as a Frontend Developer at ITPie, I worked in an Agile environment to deliver custom web solutions for a diverse range of clients. Utilizing a bespoke content management system built in C#, I was responsible for designing, developing, and testing front-end components that met each client&apos;s unique requirements using JavaScript and various libraries.</p>
           </div>
         </div>
     </Bounded>
