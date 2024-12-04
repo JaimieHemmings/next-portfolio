@@ -5,6 +5,11 @@ const ProjectPostSchema = new Schema({
     type: String,
     required: [true, 'Title is required'],
   },
+  slug: {
+    type: String,
+    required: [true, 'Slug is required'],
+    unique: [true, 'Slug already exists'],
+  },
   tags: {
     type: [String],
     default: [],

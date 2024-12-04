@@ -8,65 +8,27 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger);
 
-type ContentItem = {
+type posts = {
   title: string;
+  slug: string;
   tags: string[];
+  repoLink: string;
+  liveSite: string;
+  content1: string;
+  content2: string;
   image: string;
-  link: string;
+  content3: string;
+  title2: string;
+  content4: string;
+  content5: string;
+  content6: string;
 };
 
-const itemList: ContentItem[] = [
-  {
-    title: "Blog Post Title 1",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 2",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 3",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 1",
-    tags: ["CSS", "Tailwind"],
-    image: "https://picsum.photos/200/300?random=4",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 1",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 2",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 3",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3",
-    link: "/blog/articlexample"
-  },
-  {
-    title: "Blog Post Title 1",
-    tags: ["CSS", "Tailwind"],
-    image: "https://picsum.photos/200/300?random=4",
-    link: "/blog/articlexample"
-  },
-];
+type ContentListProps = {
+  posts: posts[];
+};
 
-export default function ContentList() {
+export default function ContentList({ posts }: ContentListProps) {
 
   const component = useRef(null);
   const revealRef = useRef(null);
@@ -143,12 +105,12 @@ export default function ContentList() {
   }, [currentItem]);
 
   useEffect(() => {
-    itemList.forEach((url) => {
+    posts.forEach((url) => {
       if(!url) return;
       const img = new Image();
       img.src = url.image;
     })
-  }, [itemList]);
+  }, [posts]);
 
   const onMouseEnter = (index: number) => {
     setCurrentItem(index);
@@ -158,13 +120,22 @@ export default function ContentList() {
     setCurrentItem(null);
   }
 
+  if (!posts) {
+    <div className="text-slate-200">Loading...</div>
+  }
+
   return (
     <div ref={component}>
+      {posts.length === 0 && (
+        <div className="text-slate-200 prose text-2xl prose-invert font-bold py-12">
+          <p>No posts found</p>
+        </div>
+      )}
       <ul
         onMouseLeave={onMouseLeave}
         className="grid border-b border-b-slate-100"
       >
-        {itemList.map((item, index) => (
+        {posts.map((item, index) => (
           <li
             ref={(el) =>{ itemsRef.current[index] = el; }}
             key={index}
@@ -172,7 +143,7 @@ export default function ContentList() {
             onMouseEnter={() => onMouseEnter(index)}  
           >
             <Link
-              href={item.link}
+              href={`/blog/${item.slug}`}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
               aria-label="Blog Post Title">
               <div className="flex flex-col">
@@ -195,7 +166,7 @@ export default function ContentList() {
           className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
           style={{
             backgroundImage:
-              currentItem !== null ? `url(${itemList[currentItem].image})` : "",
+              currentItem !== null ? `url(${posts[currentItem].image})` : "",
           }}
           ref={revealRef}
         ></div>
