@@ -116,7 +116,7 @@ export default function ContentList() {
       let ctx = gsap.context(() => {
         if (currentItem != null) {
           const maxY = window.scrollY + window.innerHeight - 350;
-          const maxX = window.innerWidth + 250;
+          const maxX = window.innerWidth - 250;
 
           gsap.to(revealRef.current, {
             x: gsap.utils.clamp(0, maxX, mousePos.x -110),

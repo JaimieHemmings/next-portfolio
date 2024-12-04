@@ -2,7 +2,6 @@ import React from 'react'
 import Bounded from '@/components/Bounded'
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
-import Link from 'next/link'
 
 const page = () => {
   return (
@@ -16,7 +15,7 @@ const page = () => {
           <span>Tag 2</span>
         </div>
         <p className="mt-8 border-b border-slate-600 text-xl font-medium text-slate-300">Wednesday, December 4, 2024</p>
-        <div className="pt-6 mb-0 px-4 flex gap-4">
+        <div className="pt-6 mb-0 px-4 flex gap-4 flex-col md:flex-row">
           <Button linkField="/blog" label="View Github Repo" className="mt-8" />
           <Button linkField="/blog" label="View Live Site" className="mt-8" />
         </div>
