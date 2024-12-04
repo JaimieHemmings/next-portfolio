@@ -10,14 +10,20 @@ import Bounded from './Bounded'
 
 gsap.registerPlugin(ScrollTrigger)
 
+type Tech = {
+  name: string
+  color: string
+}
+
 export default function TechList() {
 
-  const techs: string[] = [
-    "React",
-    "Next.js",
-    "Django",
-    "Tailwind",
-    "Three.js",
+  const techs: Tech[] = [
+    {name: "React",      color: "#9b5de5"},
+    {name: "Next.js",    color: "#f15bb5"},
+    {name: "TypeScript", color: "#fee440"},
+    {name: "Django",     color: "#00bbf9"},
+    {name: "Tailwind",   color: "#00f5d4"},
+    {name: "Three.js",   color: "#fbb02d"}
   ]
 
   const component = useRef(null)
@@ -58,16 +64,16 @@ export default function TechList() {
         </Heading>
       </Bounded>
       {techs.map((tech, index) => (
-        <div key={index} className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700" aria-label={tech || undefined}>
+        <div key={index} className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700" aria-label={tech.name || undefined}>
           {Array.from({ length: 15}, (_, i) => (
             <React.Fragment key={i}>
               <span
                 className="tech-item text-8xl font-extrabold uppercase tracking-tighter"
                 style={{
-                  color: i === 7 ? "#000000" : "inheret",
+                  color: i === 7 ? tech.color : "inheret",
                 }}
               >
-                {tech}
+                {tech.name}
               </span>
               <span className='text-3xl'>
                 <MdCircle />

@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { metalness } from "three/examples/jsm/nodes/Nodes.js";
 
 export function Shapes() {
   return (
@@ -13,7 +12,7 @@ export function Shapes() {
       <Canvas
         className="z-0"
         shadows
-        gl={{ antialias: true }}
+        gl={{ antialias: false }}
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 25], fov: 30, near: 1, far: 40 }}
       >
@@ -38,27 +37,27 @@ function Geometries() {
     {
       position: [0, 0, 0],
       r: 1,
-      geometry: new THREE.TorusKnotGeometry(1.3), // TorusKnot
+      geometry: new THREE.TorusKnotGeometry(1.3),
     },
     {
       position: [1, -0.75, 4],
       r: 1.2,
-      geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
+      geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16),
     },
     {
       position: [-1.4, 2, -4],
       r: 0.6,
-      geometry: new THREE.DodecahedronGeometry(1.5), // Soccer ball
+      geometry: new THREE.DodecahedronGeometry(1.5),
     },
     {
       position: [-0.8, -0.75, 5],
       r: 0.5,
-      geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32), // Donut
+      geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32),
     },
     {
       position: [1.6, 1.6, -4],
       r: 0.7,
-      geometry: new THREE.OctahedronGeometry(1.5), // Diamond
+      geometry: new THREE.OctahedronGeometry(1.5),
     },
   ];
 
