@@ -12,48 +12,57 @@ type ContentItem = {
   title: string;
   tags: string[];
   image: string;
+  link: string;
 };
 
 const itemList: ContentItem[] = [
   {
     title: "Blog Post Title 1",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1"
+    image: "https://picsum.photos/200/300?random=1",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 2",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2"
+    image: "https://picsum.photos/200/300?random=2",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 3",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3"
+    image: "https://picsum.photos/200/300?random=3",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 1",
     tags: ["CSS", "Tailwind"],
-    image: "https://picsum.photos/200/300?random=4"
+    image: "https://picsum.photos/200/300?random=4",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 1",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1"
+    image: "https://picsum.photos/200/300?random=1",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 2",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2"
+    image: "https://picsum.photos/200/300?random=2",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 3",
     tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3"
+    image: "https://picsum.photos/200/300?random=3",
+    link: "/blog/articlexample"
   },
   {
     title: "Blog Post Title 1",
     tags: ["CSS", "Tailwind"],
-    image: "https://picsum.photos/200/300?random=4"
+    image: "https://picsum.photos/200/300?random=4",
+    link: "/blog/articlexample"
   },
 ];
 
@@ -163,7 +172,7 @@ export default function ContentList() {
             onMouseEnter={() => onMouseEnter(index)}  
           >
             <Link
-              href="#"
+              href={item.link}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
               aria-label="Blog Post Title">
               <div className="flex flex-col">

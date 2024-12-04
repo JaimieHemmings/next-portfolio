@@ -9,7 +9,7 @@ export default function page() {
       <Heading>
         Blog
       </Heading>
-      <div className="prose prose-xl prose-invert mb-10">
+      <div className="prose prose-xl prose-invert my-10">
         <p>
           Welcome to my blog! Here you&apos;ll find a collection of articles on web development, technology, and design. I hope you find them helpful and informative.
         </p>
