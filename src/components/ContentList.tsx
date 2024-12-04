@@ -55,41 +55,6 @@ const itemList: ContentItem[] = [
     tags: ["CSS", "Tailwind"],
     image: "https://picsum.photos/200/300?random=4"
   },
-  {
-    title: "Blog Post Title 1",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1"
-  },
-  {
-    title: "Blog Post Title 2",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2"
-  },
-  {
-    title: "Blog Post Title 3",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3"
-  },
-  {
-    title: "Blog Post Title 1",
-    tags: ["CSS", "Tailwind"],
-    image: "https://picsum.photos/200/300?random=4"
-  },
-  {
-    title: "Blog Post Title 1",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=1"
-  },
-  {
-    title: "Blog Post Title 2",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=2"
-  },
-  {
-    title: "Blog Post Title 3",
-    tags: ["JavaScript", "React"],
-    image: "https://picsum.photos/200/300?random=3"
-  },
 ];
 
 export default function ContentList() {
@@ -167,6 +132,14 @@ export default function ContentList() {
       window.removeEventListener("mousemove", handleMouseMove);
     }
   }, [currentItem]);
+
+  useEffect(() => {
+    itemList.forEach((url) => {
+      if(!url) return;
+      const img = new Image();
+      img.src = url.image;
+    })
+  }, [itemList]);
 
   const onMouseEnter = (index: number) => {
     setCurrentItem(index);
