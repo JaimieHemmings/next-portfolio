@@ -10,7 +10,6 @@ const page = async () => {
   await ConnectDB();
   const blogPosts: any = await BlogPost.find({}).sort({ createdAt: -1 }).lean();
 
-
   return (
     <Bounded>
       <Heading>
