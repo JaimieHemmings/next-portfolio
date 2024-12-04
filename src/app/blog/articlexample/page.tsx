@@ -16,14 +16,16 @@ const page = () => {
           <span>Tag 2</span>
         </div>
         <p className="mt-8 border-b border-slate-600 text-xl font-medium text-slate-300">Wednesday, December 4, 2024</p>
-        <div className="py-12 px-4 flex gap-4">
+        <div className="pt-6 mb-0 px-4 flex gap-4">
           <Button linkField="/blog" label="View Github Repo" className="mt-8" />
           <Button linkField="/blog" label="View Live Site" className="mt-8" />
         </div>
-        <div className="prose prose-invert prose-lg mt-12 w-full max-w-none">
+        <div className="prose prose-invert prose-lg mt-12 w-full max-w-prose md:mt-20 mb-12">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium repellat? Iure ex error perferendis laborum maxime harum alias iste? Eius ipsum facere rem cum tempora reprehenderit optio impedit odio?</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium repellat? Iure ex error perferendis laborum maxime harum alias iste? Eius ipsum facere rem cum tempora reprehenderit optio impedit odio?</p>
-          <img src="https://picsum.photos/900/300" alt="Article Image" className="rounded-lg mx-auto max-w-full h-auto" />
+        </div>
+        <img src="https://picsum.photos/900/300" alt="Article Image" className="rounded-lg mx-auto w-full h-auto" />
+        <div className="prose prose-invert prose-lg mt-12 w-full max-w-prose md:mt-20">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium repellat? Iure ex error perferendis laborum maxime harum alias iste? Eius ipsum facere rem cum tempora reprehenderit optio impedit odio?</p>
           <h2>Extra Heading</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusantium repellat? Iure ex error perferendis laborum maxime harum alias iste? Eius ipsum facere rem cum tempora reprehenderit optio impedit odio?</p>

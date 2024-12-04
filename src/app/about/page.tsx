@@ -7,6 +7,7 @@ import TechList from '@/components/TechList'
 
 const page = () => {
   return (
+    <>
     <Bounded>
       <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
         <Heading as="h1" size="xl" className="col-start-1">
@@ -25,8 +26,9 @@ const page = () => {
           className="row-start-1 mx-auto max-w-sm md:col-start-2 md:row-end-3"
         />
       </div>
-      <TechList />
     </Bounded>
+    <TechList />
+    </>
   )
 }
 
