@@ -9,7 +9,7 @@ export default function Custom404() {
       </Heading>
       <div className="prose prose-xl prose-invert my-10">
         <p>
-          It looks like something went wrong. The page you were looking for doesn't exist.
+          It looks like something went wrong. The page you were looking for doesn&apos;t exist.
         </p>
       </div>
     </Bounded>
