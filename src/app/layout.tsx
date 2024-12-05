@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${urbanist.className} h-full relative`}>
         <Header />
         {children}
-        <div className="background-gradient absolute inset-0 -z-50 min-h-screen top-0" />
+        <div className="background-gradient inset-0 -z-50 min-h-screen top-0 fixed" />
         <div className="pointer-events-none inset-0 -z-40 h-screen bg-[url('/image/noisetexture.jpg')] background-repeat opacity-20 mix-blend-soft-light fixed w-full top-0 left-0"></div>
         <Footer />
       </body>
