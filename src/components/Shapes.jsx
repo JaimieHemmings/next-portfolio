@@ -73,24 +73,16 @@ function Geometries() {
 
   const materials = [
     new THREE.MeshNormalMaterial(),
-    new THREE.MeshStandardMaterial({ color: 0x01ffff, roughness: 0 }),
-    new THREE.MeshStandardMaterial({ color: 0xe233fe, roughness: 0.4 }),
-    new THREE.MeshStandardMaterial({ color: 0xfbf5f5, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0xcff5fe, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0xe233fe, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0xD90368, roughness: 0.4 }),
-    new THREE.MeshStandardMaterial({ color: 0x2E294E, roughness: 0.7 }),
-    new THREE.MeshStandardMaterial({ color: 0xFFD400, roughness: 0.2 }),
-    new THREE.MeshStandardMaterial({
-      roughness: 0,
-      metalness: 1,
-      color: 0x01ffff,
-    }),
-    new THREE.MeshStandardMaterial({
-      color: 0xe233fe,
-      roughness: 0.1,
-      metalness: 0.5,
-    }),
+    new THREE.MeshStandardMaterial({ color: 0xCCFF00, roughness: 0, metalness: 0.6 }),
+    new THREE.MeshStandardMaterial({ color: 0xFF007F, roughness: 0.4, metalness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0x00FFFF, roughness: 0.1, metalness: 0.8 }),
+    new THREE.MeshStandardMaterial({ color: 0xBF00FF, roughness: 0.1, metalness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0xFF1DCE, roughness: 0.1, metalness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0x39FF14, roughness: 0.4, metalness: 0.6 }),
+    new THREE.MeshStandardMaterial({ color: 0xFF4500, roughness: 0.7, metalness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0xFFFF66, roughness: 0.2, metalness: 0.6 }),
+    new THREE.MeshStandardMaterial({ color: 0xFF073A, roughness: 0.7, metalness: 0.5 }),
+    new THREE.MeshStandardMaterial({ color: 0x00FFC6, roughness: 0.2, metalness: 0.6 }),
   ];
 
   return geometries.map(({ position, r, geometry }) => (

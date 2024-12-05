@@ -110,7 +110,7 @@ function DesktopMenu({link}: {link: LinkItem[]}) {
       ))}
       <li>
         <Button
-          linkField="#"
+          linkField="/contact"
           label="Contact"
           className="ml-3"
         />
