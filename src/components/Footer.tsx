@@ -96,6 +96,14 @@ export default async function Footer() {
           >
             <FaGithub />
           </Link>
+          <Link
+            href="https://www.linkedin.com/in/jaimiehemmings/"
+            target="_blank"
+            className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+            aria-label="Jaimie Hemmings on LinkedIn"
+          >
+            <FaLinkedin />
+          </Link>
         </div>
       </div>
     </Bounded>
