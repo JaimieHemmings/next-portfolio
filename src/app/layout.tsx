@@ -3,6 +3,7 @@ import { Urbanist } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 const urbanist = Urbanist({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-900 text-slate-100">
       <body className={`${urbanist.className} h-full relative`}>
+        <GoogleAnalytics />
         <Header />
         {children}
         <div className="background-gradient inset-0 -z-50 min-h-screen top-0 fixed" />
