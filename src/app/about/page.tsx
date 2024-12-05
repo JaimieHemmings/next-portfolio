@@ -18,7 +18,7 @@ const page = () => {
           <p>Over the years, I&apos;ve honed my skills in front-end development to deliver pixel-perfect designs using tools like React, Tailwind CSS, and Three.js, while my expertise in back-end technologies enables me to create robust APIs and seamless integrations with frameworks like Django. I take pride in writing clean, maintainable code and ensuring my projects are optimized for performance, security, and scalability.</p>
           <p>I&apos;m not just about code—collaboration and problem-solving are at the heart of what I do. Whether working independently or as part of a team, I thrive in environments where innovation and creativity drive success.</p>
           <p>Beyond development, I&apos;m committed to staying on the cutting edge of technology, constantly exploring new tools and techniques to deliver exceptional results. Let&apos;s create something amazing together!</p>
-          <Button linkField="#" label="Contact Me" />
+          <Button linkField="/contact" label="Contact Me" />
         </div>
         <Avatar
           altText="Jaimie Hemmings"
