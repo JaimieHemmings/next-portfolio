@@ -15,8 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ContentList({ articles }: Props) {
 
-  console.log(articles)
-
   const component = useRef(null);
   const revealRef = useRef(null);
   const itemsRef = useRef<Array<HTMLLIElement | null>>([]);

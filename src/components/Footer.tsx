@@ -89,7 +89,8 @@ export default async function Footer() {
         </nav>
         <div className="socials inline-flex justify-center sm:justify-end">
           <Link
-            href="#"
+            href="https://github.com/JaimieHemmings"
+            target="_blank"
             className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
             aria-label="Jaimie Hemmings on LinkedIn"
           >
