@@ -68,7 +68,7 @@ export default function TechList() {
           {Array.from({ length: 15}, (_, i) => (
             <React.Fragment key={i}>
               <span
-                className="tech-item text-8xl font-extrabold uppercase tracking-tighter"
+                className="tech-item text-4xl md:text-8xl font-extrabold uppercase tracking-tighter"
                 style={{
                   color: i === 7 ? tech.color : "inheret",
                 }}
