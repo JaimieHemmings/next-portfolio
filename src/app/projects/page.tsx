@@ -2,12 +2,11 @@ import React from 'react'
 import Bounded from '@/components/Bounded'
 import Heading from '@/components/Heading'
 import ContentList from '@/components/ContentList'
-import ConnectDB from '@/config/Database'
-import ProjectPost from '@/models/ProjectPost'
+import { getCategorisedArticles } from '@/lib/articles'
 
 const page = async () => {
-
-  const projectPosts: any = await ProjectPost.find({}).sort({ createdAt: -1 }).lean();
+  const articles = getCategorisedArticles()
+  const projectArticles = articles.projects || []
 
   return (
     <Bounded>
@@ -19,7 +18,7 @@ const page = async () => {
           Welcome to my projects page! Here you&apos;ll find a collection of projects I&apos;ve worked on. I hope you find them interesting and inspiring.
         </p>
       </div>
-      <ContentList posts={projectPosts} />
+      <ContentList articles={projectArticles} />
     </Bounded>
   )
 }

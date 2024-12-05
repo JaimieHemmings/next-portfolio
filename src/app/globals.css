@@ -10,3 +10,9 @@
     hsla(222, 0%, 0%, 0) 100%
   );
 }
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+}

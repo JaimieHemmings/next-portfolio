@@ -8,12 +8,14 @@ type ButtonProps = {
   label: string;
   showIcon?: boolean;
   className?: string;
+  isExternal?: boolean;
 }
 
-export default function Button ({ linkField, label, showIcon = true, className}: ButtonProps): JSX.Element
+export default function Button ({ linkField, label, showIcon = true, className, isExternal = false}: ButtonProps): JSX.Element
 {
   return (
     <Link
+      target={ isExternal ? "_blank" : "" }
       href={ linkField }
       className={clsx("group relative flex w-fit text-slate-800 items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-4 py-2 font-bold transition-transform ease-out hover:scale-105 no-underline", className)}
     >

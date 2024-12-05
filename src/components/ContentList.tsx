@@ -5,30 +5,17 @@ import React, { useEffect, useRef, useState } from 'react'
 import { MdArrowOutward } from 'react-icons/md'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import type { ArticleItem } from '@/types'
+
+interface Props {
+  articles: ArticleItem[]
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
-type posts = {
-  title: string;
-  slug: string;
-  tags: string[];
-  repoLink: string;
-  liveSite: string;
-  content1: string;
-  content2: string;
-  image: string;
-  content3: string;
-  title2: string;
-  content4: string;
-  content5: string;
-  content6: string;
-};
+export default function ContentList({ articles }: Props) {
 
-type ContentListProps = {
-  posts: posts[];
-};
-
-export default function ContentList({ posts }: ContentListProps) {
+  console.log(articles)
 
   const component = useRef(null);
   const revealRef = useRef(null);
@@ -105,12 +92,12 @@ export default function ContentList({ posts }: ContentListProps) {
   }, [currentItem]);
 
   useEffect(() => {
-    posts.forEach((url) => {
+    articles.forEach((url) => {
       if(!url) return;
       const img = new Image();
       img.src = url.image;
     })
-  }, [posts]);
+  }, [articles]);
 
   const onMouseEnter = (index: number) => {
     setCurrentItem(index);
@@ -120,13 +107,9 @@ export default function ContentList({ posts }: ContentListProps) {
     setCurrentItem(null);
   }
 
-  if (!posts) {
-    <div className="text-slate-200">Loading...</div>
-  }
-
   return (
     <div ref={component}>
-      {posts.length === 0 && (
+      {articles.length === 0 && (
         <div className="text-slate-200 prose text-2xl prose-invert font-bold py-12">
           <p>No posts found</p>
         </div>
@@ -135,7 +118,7 @@ export default function ContentList({ posts }: ContentListProps) {
         onMouseLeave={onMouseLeave}
         className="grid border-b border-b-slate-100"
       >
-        {posts.map((item, index) => (
+        {articles.map((articles, index) => (
           <li
             ref={(el) =>{ itemsRef.current[index] = el; }}
             key={index}
@@ -143,15 +126,15 @@ export default function ContentList({ posts }: ContentListProps) {
             onMouseEnter={() => onMouseEnter(index)}  
           >
             <Link
-              href={`/blog/${item.slug}`}
+              href={`/${articles.category}/${articles.id}`}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
               aria-label="Blog Post Title">
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">{item.title}</span>
+                <span className="text-3xl font-bold">{articles.title}</span>
                 <div className="flex gap-3 text-yellow-400 text-lg font-bold">
-                  {item.tags.map((tag, index) => (
+                  {/*{item.tags.map((tag, index) => (
                     <span key={index}>{tag}</span>
-                  ))}
+                  ))}*/}
                 </div>
               </div>
               <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
@@ -166,7 +149,7 @@ export default function ContentList({ posts }: ContentListProps) {
           className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
           style={{
             backgroundImage:
-              currentItem !== null ? `url(${posts[currentItem].image})` : "",
+              currentItem !== null ? `url(${articles[currentItem].image})` : "",
           }}
           ref={revealRef}
         ></div>
