@@ -4,7 +4,7 @@ category: "projects"
 date: "07-12-2024"
 image: "image/feedback-app.webp"
 repo: "https://github.com/JaimieHemmings/review-demo"
-liveSite: "https://review-demo-jh.netlify.app/"
+liveSite: ""
 tags: ["React", "Tailwind", "Typescript"]
 ---
 
