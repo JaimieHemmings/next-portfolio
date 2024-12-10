@@ -3,7 +3,7 @@ title: "GithubRef: Exploring Shadcn/ui and Typescript"
 category: "projects"
 date: "10-12-2024"
 image: "image/githubref.jpg"
-repo: "https://github.com/JaimieHemmings/fstops-2.0"
+repo: "https://github.com/JaimieHemmings/github-api-project"
 liveSite: "https://githubref.netlify.app/"
 tags: ["React", "TypeScript", "Shadcn/UI"]
 ---
