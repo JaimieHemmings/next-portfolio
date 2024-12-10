@@ -12,8 +12,6 @@ tags: ["React", "TypeScript", "Shadcn/UI"]
 
 I'm excited to introduce **GithubRef**, a tool that allows you to search for GitHub users via the GitHub API and display their profile information. This project was born out of a desire to deepen my understanding of **React reducers**, explore the power of **Shadcn UI**, and get hands-on experience with **TypeScript**.
 
-You can check out the project here: [GithubRef on GitHub](https://githubref.netlify.app/).
-
 ---
 
 ## The Idea Behind GithubRef
@@ -62,8 +60,6 @@ The interface is designed to be intuitive, thanks to Shadcn UI's elegant compone
 
 ## Conclusion
 
-Building **GithubRef** was a rewarding experience that deepened my understanding of React reducers, introduced me to Shadcn UI, and reinforced TypeScript best practices. If you're interested in exploring the project, feel free to check out the repository and contribute!
-
-🔗 **[View the Repository](https://githubref.netlify.app/)**
+Building **GithubRef** was a rewarding experience that deepened my understanding of React reducers, introduced me to Shadcn UI, and reinforced TypeScript best practices. If you're interested in exploring the project, feel free to check out the repo!
 
 ---
